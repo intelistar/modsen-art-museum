@@ -1,0 +1,35 @@
+@use '@styles/colors';
+
+.wrapper {
+  display: flex;
+  gap: 0.5rem;
+
+  .button {
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    color: inherit;
+    font: {
+      weight: normal;
+      size: 1.2rem;
+    }
+    border: none;
+    background-color: inherit;
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: colors.$accent-color;
+    }
+  }
+
+  .current {
+    font-weight: 600;
+    color: colors.$white;
+    background-color: colors.$accent-color;
+    border-radius: 4px;
+
+    &:hover {
+      color: colors.$white;
+    }
+  }
+}
