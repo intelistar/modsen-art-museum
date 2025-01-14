@@ -1,0 +1,69 @@
+@use '@styles/colors';
+
+.wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+
+  cursor: pointer;
+
+  .image {
+    width: 100%;
+    height: 300px;
+
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .info_container {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: space-between;
+
+    .info {
+      width: 90%;
+      height: 100%;
+      background-color: colors.$white;
+      text-align: left;
+
+      padding: 1rem 1rem 1 rem;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: space-between;
+
+      .title {
+        width: 90%;
+        font: {
+          weight: 500;
+          size: 1.1rem;
+        }
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+      }
+
+      .artist {
+        width: 80%;
+        font-size: 0.9rem;
+        color: colors.$secondary-color;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+      }
+
+      .isOnView {
+        margin-top: 0.5rem;
+        font: {
+          weight: 700;
+          size: 0.9rem;
+        }
+      }
+    }
+  }
+}
