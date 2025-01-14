@@ -1,0 +1,39 @@
+@use '@styles/colors';
+
+.wrapper {
+  width: 50%;
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+
+  .title {
+    width: 100%;
+    font: {
+      weight: 700;
+      size: 4rem;
+    }
+
+    span {
+      color: colors.$accent-color;
+    }
+  }
+  .results {
+    width: 100%;
+  }
+
+  .sorts {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+  }
+}
+.message {
+  font-size: 1.1rem;
+  color: colors.$accent-color;
+}

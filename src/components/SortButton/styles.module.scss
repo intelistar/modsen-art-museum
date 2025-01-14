@@ -1,0 +1,14 @@
+@use '@styles/colors';
+
+.wrapper {
+  cursor: pointer;
+
+  transition: color 0.2s ease;
+
+  &:hover {
+    color: colors.$accent-color;
+  }
+}
+.current {
+  color: colors.$accent-color;
+}
