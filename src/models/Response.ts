@@ -6,9 +6,9 @@ export interface Config {
   websiteUrl: string
 }
 
-export interface PaginatedResponse {
+export interface ArtworksResponse {
   config: Config
   data: ArtworkRaw[]
-  pagination: PaginationRaw
+  pagination?: PaginationRaw
   info: Record<string, unknown>
 }
