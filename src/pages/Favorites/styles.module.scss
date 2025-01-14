@@ -1,0 +1,51 @@
+@use '@styles/colors';
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .title {
+    width: 50%;
+    margin-bottom: 10rem;
+    font: {
+      weight: 700;
+      size: 4rem;
+    }
+
+    span {
+      color: colors.$accent-color;
+    }
+  }
+  .header {
+    margin-bottom: 3rem;
+    text-align: center;
+
+    .subtitle {
+      font: {
+        weight: normal;
+        size: 1.3rem;
+      }
+      color: colors.$secondary-color;
+    }
+
+    .header_title {
+      font: {
+        weight: normal;
+        size: 3rem;
+      }
+    }
+  }
+  .grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 600px));
+    justify-content: center;
+    gap: 1rem;
+  }
+}
+
+.message {
+  font-size: 1.1rem;
+  color: colors.$accent-color;
+}

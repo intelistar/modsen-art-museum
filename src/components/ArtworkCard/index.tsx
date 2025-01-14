@@ -1,7 +1,10 @@
 import { FC } from 'react'
 import { Artwork } from '../../models/Artwork'
 import { useNavigate } from 'react-router-dom'
+import favoriteIcon from '@assets/icons/bookmark.png'
+import favoriteIconFill from '@assets/icons/bookmarkFill.png'
 import styles from './styles.module.scss'
+import useFavorites from '@hooks/useFavorites'
 
 interface Props {
   artwork: Artwork
@@ -15,6 +18,13 @@ const ArtworkCard: FC<Props> = ({ artwork }) => {
     navigate(`/artworks/${id}`)
   }
 
+  const { favorites, toggleFavorite } = useFavorites()
+  const isFavorite = favorites.includes(id)
+  const handleFavoriteClick = (e: React.MouseEvent) => {
+    e.stopPropagation()
+    toggleFavorite(id)
+  }
+
   return (
     <div className={styles.wrapper} onClick={handleArtworkClick}>
       <img src={imageUrl} alt={title} className={styles.image} />
@@ -25,6 +35,11 @@ const ArtworkCard: FC<Props> = ({ artwork }) => {
           <p className={styles.isOnView}>{isOnView ? 'Public' : 'Private'}</p>
         </div>
       </div>
+      <img
+        className={styles.favorite}
+        onClick={handleFavoriteClick}
+        src={isFavorite ? favoriteIconFill : favoriteIcon}
+      />
     </div>
   )
 }

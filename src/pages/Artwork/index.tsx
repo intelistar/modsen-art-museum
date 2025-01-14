@@ -1,10 +1,20 @@
 import { useParams } from 'react-router-dom'
 import useArtwork from '@hooks/useArtwork'
+import favoriteIcon from '@assets/icons/bookmark.png'
+import favoriteIconFill from '@assets/icons/bookmarkFill.png'
 import styles from './styles.module.scss'
+import useFavorites from '@hooks/useFavorites'
 
 const Artwork = () => {
   const { id } = useParams()
   const { artwork, loading } = useArtwork(Number(id))
+
+  const { favorites, toggleFavorite } = useFavorites()
+  const isFavorite = favorites.includes(Number(id))
+  const handleFavoriteClick = (e: React.MouseEvent) => {
+    e.stopPropagation()
+    toggleFavorite(Number(id))
+  }
 
   if (loading || !artwork) return <div>Loading...</div>
 
@@ -24,6 +34,11 @@ const Artwork = () => {
     <div className={styles.wrapper}>
       <section className={styles.image_section}>
         <img src={imageUrl} alt={title} loading="lazy" />
+        <img
+          className={styles.favorite}
+          onClick={handleFavoriteClick}
+          src={isFavorite ? favoriteIconFill : favoriteIcon}
+        />
       </section>
       <section className={styles.info_section}>
         <section className={styles.header}>

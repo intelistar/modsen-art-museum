@@ -16,13 +16,12 @@
       object-fit: cover;
       object-position: center;
     }
-    .favoriteIcon {
+    .favorite {
       position: absolute;
+      top: 1rem;
+      right: 1rem;
       width: 24px;
       height: 24px;
-      right: 1rem;
-      top: 1rem;
-
       cursor: pointer;
     }
   }
@@ -74,10 +73,10 @@
         flex-direction: column;
         gap: 1rem;
         font-size: 1.3rem;
+        overflow: hidden;
+        // white-space: nowrap;
+        text-overflow: ellipsis;
         li {
-          overflow: hidden;
-          white-space: nowrap;
-          text-overflow: ellipsis;
           span {
             color: colors.$secondary-color;
           }

@@ -8,6 +8,7 @@
   align-items: center;
   justify-content: space-between;
   gap: 0.5rem;
+  position: relative;
 
   cursor: pointer;
 
@@ -65,5 +66,12 @@
         }
       }
     }
+  }
+  .favorite {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    width: 24px;
+    height: 24px;
   }
 }

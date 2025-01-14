@@ -32,7 +32,7 @@ const useFavorites = () => {
     }
   }, [])
 
-  return [favorites, toggleFavorite]
+  return { favorites, toggleFavorite }
 }
 
 export default useFavorites
