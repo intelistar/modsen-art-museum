@@ -1,6 +1,7 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Home from '@pages/Home'
 import Layout from '@components/Layout'
+import Artwork from '@pages/Artwork'
 
 const router = createBrowserRouter([
   {
@@ -11,6 +12,10 @@ const router = createBrowserRouter([
       {
         path: '/',
         element: <Home />,
+      },
+      {
+        path: '/artworks/:id',
+        element: <Artwork />,
       },
     ],
   },
