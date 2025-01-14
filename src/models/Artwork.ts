@@ -1,5 +1,19 @@
+export interface Artwork {
+  id: number
+  title: string
+  imageUrl: string
+  artist: string
+  isOnView: boolean
+  date: number
+}
+export interface DetailedArtwork extends Artwork {
+  placeOfOrigin?: string
+  dimensions?: string
+  creditLine?: string
+  galleryTitle?: string
+}
 export interface ArtworkRaw {
-  id: string
+  id: number
   title: string
   image_id: string
   artist_title: string
