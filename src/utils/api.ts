@@ -1,10 +1,10 @@
 import { ARTIC_API_URL } from '@constants/api'
-import { ArtworksResponse } from '@models/Response'
+import { ArtworkResponse, PaginatedResponse } from '@models/Response'
 
-export const fetchArtworks = async (
+export const getArtworks = async (
   path: string,
   params: Record<string, string>
-): Promise<ArtworksResponse> => {
+): Promise<PaginatedResponse> => {
   const response = await fetch(
     `${ARTIC_API_URL}artworks/${path}?` + new URLSearchParams(params)
   )
@@ -13,10 +13,10 @@ export const fetchArtworks = async (
   return data
 }
 
-export const fetchArtwork = async (
+export const getArtwork = async (
   id: number,
   params?: Record<string, string>
-): Promise<ArtworksResponse> => {
+): Promise<ArtworkResponse> => {
   const response = await fetch(
     `${ARTIC_API_URL}artworks/${id}?` + new URLSearchParams(params)
   )
