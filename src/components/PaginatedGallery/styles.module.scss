@@ -13,12 +13,19 @@
         size: 1.3rem;
       }
       color: colors.$secondary-color;
+
+      @media (max-width: 490px) {
+        font-size: 1rem;
+      }
     }
 
     .title {
       font: {
         weight: normal;
         size: 3rem;
+      }
+      @media (max-width: 490px) {
+        font-size: 2rem;
       }
     }
   }

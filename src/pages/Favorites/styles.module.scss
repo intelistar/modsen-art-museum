@@ -16,6 +16,10 @@
     span {
       color: colors.$accent-color;
     }
+    @media (max-width: 945px) {
+      width: 100%;
+      font-size: 3rem;
+    }
   }
   .header {
     margin-bottom: 3rem;
@@ -33,6 +37,19 @@
       font: {
         weight: normal;
         size: 3rem;
+      }
+    }
+  }
+  @media (max-width: 615px) {
+    .title {
+      font-size: 2rem;
+    }
+    .header {
+      .subtitle {
+        font-size: 1rem;
+      }
+      .header_title {
+        font-size: 2rem;
       }
     }
   }

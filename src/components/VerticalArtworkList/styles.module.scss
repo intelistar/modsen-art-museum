@@ -13,4 +13,8 @@
 
   padding-top: 1rem;
   padding-right: 0.5rem;
+
+  @media (max-width: 520px) {
+    gap: 2rem;
+  }
 }
