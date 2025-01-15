@@ -20,6 +20,8 @@ export const getArtwork = async (
   const response = await fetch(
     `${ARTIC_API_URL}artworks/${id}?` + new URLSearchParams(params)
   )
+
   const data = await response.json()
+
   return data
 }
